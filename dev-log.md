@@ -1,26 +1,26 @@
-book social app
+book social app (for children's books-educational, beginner readings)
 
 \*USER
 name
-username-email?
+username
 password_digest
 
 has_many :books
-has_many :book, through: :books
-has-one or belongs_to :home, class_name: "book"?
-
-\*BOOKS
-name,author
-belongs_to book?
+has_many :reviews
 
 \*BOOK
 name,author,description
-belongs_to :books
+has_many :reviews
+has_many :users
 
-\*REVIEWS
+\*REVIEW
 content,rating
 belongs_to :user
 belongs_to :book
 
 rails new book-fellow --api
 rails g scaffold user name username password_digest
+Domain ideas:
+bank app
+house sale
+apps review
